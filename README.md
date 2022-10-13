@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-Live Call Booker package makes possible scheduling calls or live events. Users can provide their available times to book a call, and hosts can easily choose from the provided times to book the call or live event.
+Live Call Booker package makes possible scheduling calls or live events. Users can provide their available times to book a call (with very busy people), and hosts (the busy ones) can easily choose from the provided times to finally book the preffered time for a call or live event.
 
 ## Features
 
