@@ -1,0 +1,426 @@
+{
+  "years": [
+    {
+      "id": 1,
+      "year": 2022
+    },
+    {
+      "id": 2,
+      "year": 2023
+    }
+  ],
+  "months": [
+    {
+      "id": 1,
+      "month": "october",
+      "year": 2022
+    },
+    {
+      "id": 2,
+      "month": "november",
+      "year": 2022
+    },
+    {
+      "id": 3,
+      "month": "december",
+      "year": 2022
+    },
+    {
+      "id": 4,
+      "month": "january",
+      "year": 2023
+    },
+    {
+      "id": 5,
+      "month": "february",
+      "year": 2023
+    },
+    {
+      "month": "march",
+      "year": 2023,
+      "id": 6
+    }
+  ],
+  "days": [
+    {
+      "id": 1,
+      "day": 1,
+      "month": "october",
+      "year": 2022,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "day": 2,
+      "month": "october",
+      "year": 2022,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "03:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "day": 3,
+      "month": "october",
+      "year": 2022,
+      "times": [
+        {
+          "04:00": "selected"
+        },
+        {
+          "05:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "day": 2,
+      "month": "november",
+      "year": 2022,
+      "times": [
+        {
+          "06:00": "selected"
+        },
+        {
+          "07:30": "selected"
+        },
+        {
+          "02:30": "selected"
+        },
+        {
+          "01:00": "selected"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "day": 4,
+      "month": "november",
+      "year": 2022,
+      "times": [
+        {
+          "05:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "day": 5,
+      "month": "november",
+      "year": 2022,
+      "times": [
+        {
+          "06:00": "selected"
+        },
+        {
+          "07:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "day": 1,
+      "month": "december",
+      "year": 2022,
+      "times": [
+        {
+          "04:00": "selected"
+        },
+        {
+          "06:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "day": 2,
+      "month": "december",
+      "year": 2022,
+      "times": [
+        {
+          "06:00": "selected"
+        },
+        {
+          "03:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "day": 3,
+      "month": "december",
+      "year": 2022,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "day": 6,
+      "month": "january",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "day": 7,
+      "month": "january",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "day": 8,
+      "month": "january",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "day": 10,
+      "month": "february",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "day": 11,
+      "month": "february",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "day": 12,
+      "month": "february",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "month": "october",
+      "year": 2022,
+      "times": [
+        {
+          "03:00": "selected"
+        },
+        {
+          "05:30": "selected"
+        }
+      ],
+      "id": 16
+    },
+    {
+      "day": 5,
+      "month": "may",
+      "year": 2023,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ],
+      "id": 18
+    },
+    {
+      "day": 16,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 20
+    },
+    {
+      "day": 14,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 21
+    },
+    {
+      "day": 1,
+      "month": "november",
+      "year": 2022,
+      "times": [
+        {
+          "02:30": "selected"
+        },
+        {
+          "00:30": "booked"
+        },
+        {
+          "00:00": "selected"
+        }
+      ],
+      "id": 22
+    },
+    {
+      "day": 15,
+      "month": "december",
+      "year": 2022,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "02:30": "selected"
+        }
+      ],
+      "id": 23
+    },
+    {
+      "day": 13,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 24
+    },
+    {
+      "day": 18,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 25
+    },
+    {
+      "day": 12,
+      "month": "october",
+      "year": 2022,
+      "times": [
+        {
+          "00:00": "selected"
+        },
+        {
+          "01:30": "selected"
+        },
+        {
+          "01:00": "selected"
+        }
+      ],
+      "id": 26
+    },
+    {
+      "day": 19,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 27
+    },
+    {
+      "day": 20,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 28
+    },
+    {
+      "day": 15,
+      "month": "october",
+      "year": 2022,
+      "times": [],
+      "id": 29
+    },
+    {
+      "day": 4,
+      "month": "december",
+      "year": 2022,
+      "times": [
+        {
+          "00:00": "selected"
+        },
+        {
+          "00:30": "selected"
+        }
+      ],
+      "id": 30
+    },
+    {
+      "day": 3,
+      "month": "november",
+      "year": 2022,
+      "times": [
+        {
+          "01:00": "selected"
+        },
+        {
+          "00:30": "booked"
+        }
+      ],
+      "id": 31
+    },
+    {
+      "day": 5,
+      "month": "january",
+      "year": 2023,
+      "times": [
+        {
+          "00:30": "selected"
+        },
+        {
+          "00:00": "booked"
+        }
+      ],
+      "id": 32
+    }
+  ]
+}

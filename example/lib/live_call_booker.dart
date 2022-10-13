@@ -1,9 +1,7 @@
-library livecallbooker;
-
 import 'package:flutter/material.dart';
-import 'package:livecallbooker/widgets/month_view.dart';
-import 'package:livecallbooker/widgets/time_view.dart';
-import 'package:livecallbooker/models/availability.dart';
+import 'package:example/widgets/month_view.dart';
+import 'package:example/widgets/time_view.dart';
+import 'package:example/models/availability.dart';
 
 class LiveCallBooker extends StatefulWidget {
   const LiveCallBooker({
@@ -99,7 +97,7 @@ class LiveCallBookerState extends State<LiveCallBooker> {
               color: Colors.grey[100],
               border: Border(
                   top:
-                  BorderSide(width: 3.0, color: Colors.lightBlue.shade600)),
+                      BorderSide(width: 3.0, color: Colors.lightBlue.shade600)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,4 +137,3 @@ class LiveCallBookerState extends State<LiveCallBooker> {
     );
   }
 }
-

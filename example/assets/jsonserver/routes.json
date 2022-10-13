@@ -1,0 +1,11 @@
+{
+  "/api/*": "/$1",
+  "/years/?id=:id": "/years/?id=:id",
+  "/months/?year=:year": "/months?year=:year",
+  "/months/?year=:year&month=:month": "/months/?year=:year&month=:month",
+  "/days/:id": "/days/:id",
+  "/days/?day=:day": "/days/?day=:day",
+  "/days/?day=:day&month=:month": "/days/?day=:day&month=:month",
+  "/days/?day=:day&month=:month&yearId=:yearId": "/days/?day=:day&month=:month&yearId=:yearId",
+  "/days/?month=:month": "/days/?month=:month"
+}
