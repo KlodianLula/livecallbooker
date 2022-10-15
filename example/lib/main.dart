@@ -1,15 +1,20 @@
-// use this if you don't want the package
-// import 'package:example/live_call_booker.dart';
-
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:livecallbooker/livecallbooker.dart';
-import 'package:livecallbooker/utils/date_helper.dart';
-import 'package:livecallbooker/utils/time_helper.dart';
-import 'package:livecallbooker/models/availability.dart';
 import 'package:example/api.dart';
 import 'package:flutter/scheduler.dart';
+
+// use these if you don't want the package
+import 'package:example/live_call_booker.dart';
+import 'package:example/utils/date_helper.dart';
+import 'package:example/utils/time_helper.dart';
+import 'package:example/models/availability.dart';
+
+// use these for the package
+// import 'package:livecallbooker/livecallbooker.dart';
+// import 'package:livecallbooker/utils/date_helper.dart';
+// import 'package:livecallbooker/utils/time_helper.dart';
+// import 'package:livecallbooker/models/availability.dart';
 
 void main() => runApp(const MyApp());
 
@@ -137,30 +142,75 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: Center(
-        child: SizedBox(
-          width: 750,
-          child: LiveCallBooker(
-            isHost: _isHost,
-            onSwitchHost: _onSwitchHost,
-            initialDateSlots: _initialDateSlots,
-            finalDateSlots: _finalDateSlots,
-            selectedDay: _selectedDay,
-            selectedDate: _selectedDate,
-            availabilities: _availabilities,
-            totalDaysOfMonth: _totalDaysOfMonth,
-            yearNumber: _yearNumber,
-            monthName: _monthName,
-            daysOfWeek: _daysOfWeek,
-            initialTimeSlots: _initialTimeSlots,
-            finalTimeSlots: _finalTimeSlots,
-            timeKeyPressed: _timeKeyPressed,
-            isLoadingTime: _isLoadingTime,
-            isLoadingDate: _isLoadingDate,
-            dayName: _dayName,
-            onDaySelect: _onDaySelect,
-            onTimeSelect: _onTimeSelect,
-            onForwardArrow: _onForwardArrow,
-            onBackArrow: _onBackArrow,
+        child: Container(
+          decoration: BoxDecoration(color: Colors.grey[100]),
+          constraints: const BoxConstraints(minWidth: 300, maxWidth: 750),
+          height: double.infinity,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 10),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     crossAxisAlignment: CrossAxisAlignment.center,
+                //     children: [
+                //       Text(
+                //           _isHost
+                //               ? "Book one slot from available times:"
+                //               : "Choose the time slots when you are available:",
+                //           style: Theme.of(context)
+                //               .textTheme
+                //               .headline6
+                //               ?.copyWith(
+                //                   fontWeight: FontWeight.bold,
+                //                   color: Colors.grey)),
+                //       Row(
+                //         children: [
+                //           Switch(
+                //               value: _isHost,
+                //               activeColor: Colors.blue,
+                //               inactiveTrackColor: Colors.grey,
+                //               inactiveThumbColor: Colors.grey,
+                //               onChanged: (bool value) {
+                //                 _onSwitchHost(value);
+                //               }),
+                //           Text("As Host",
+                //               style: Theme.of(context)
+                //                   .textTheme
+                //                   .bodyLarge
+                //                   ?.copyWith(
+                //                       fontSize: 17,
+                //                       fontWeight: FontWeight.bold,
+                //                       color: Colors.grey)),
+                //         ],
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                LiveCallBooker(
+                  initialDateSlots: _initialDateSlots,
+                  finalDateSlots: _finalDateSlots,
+                  selectedDay: _selectedDay,
+                  selectedDate: _selectedDate,
+                  availabilities: _availabilities,
+                  totalDaysOfMonth: _totalDaysOfMonth,
+                  yearNumber: _yearNumber,
+                  monthName: _monthName,
+                  daysOfWeek: _daysOfWeek,
+                  initialTimeSlots: _initialTimeSlots,
+                  finalTimeSlots: _finalTimeSlots,
+                  timeKeyPressed: _timeKeyPressed,
+                  isLoadingTime: _isLoadingTime,
+                  isLoadingDate: _isLoadingDate,
+                  dayName: _dayName,
+                  onDaySelect: _onDaySelect,
+                  onTimeSelect: _onTimeSelect,
+                  onForwardArrow: _onForwardArrow,
+                  onBackArrow: _onBackArrow,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -291,91 +341,6 @@ class _MyHomePageState extends State<MyHomePage> {
         setState(() => _isLoadingTime = false);
       }
     }
-
-    // if (_isHost) {
-    //   if (selectedAvailability != null) {
-    //     if (selectedAvailability.booked == null) {
-    //       if (times.contains(timeSelected)) {
-    //         var bodyParams = {"booked": timeSelected};
-    //         await api.bookTimeSlot(selectedAvailability.id, bodyParams);
-    //         _fetchData(_selectedDate);
-    //       } else {
-    //         // do nothing
-    //         setState(() => _isLoadingTime = false);
-    //       }
-    //     } else {
-    //       // unbook
-    //       if (times.contains(timeSelected) &&
-    //           timeSelected == selectedAvailability.booked) {
-    //         var bodyParams = {
-    //           "day": selectedAvailability.day,
-    //           "month": selectedAvailability.month!.toLowerCase(),
-    //           "year": selectedAvailability.year,
-    //           "times": [...selectedAvailability.times!]
-    //         };
-    //         await api.unBookTimeSlot(selectedAvailability.id, bodyParams);
-    //         _fetchData(_selectedDate);
-    //       }
-    //       // book other
-    //       else if (times.contains(timeSelected) &&
-    //           timeSelected != selectedAvailability.booked) {
-    //         var bodyParams = {"booked": timeSelected};
-    //
-    //         await api.bookTimeSlot(selectedAvailability.id, bodyParams);
-    //         _fetchData(_selectedDate);
-    //       } else {
-    //         // do nothing
-    //         setState(() => _isLoadingTime = false);
-    //       }
-    //     }
-    //   }
-    // } else {
-    //   if (selectedAvailability == null) {
-    //     var bodyParams = {
-    //       "day": _selectedDay,
-    //       "month": _monthName.toLowerCase(),
-    //       "year": _yearNumber,
-    //       "times": [...times]
-    //     };
-    //     await api.setTimeAvailability(bodyParams);
-    //     _fetchData(_selectedDate);
-    //   } else {
-    //     if (times.isNotEmpty) {
-    //       if (times.isNotEmpty &&
-    //           selectedAvailability.booked != null &&
-    //           timeSelected == selectedAvailability.booked) {
-    //         // do nothing
-    //         setState(() => _isLoadingTime = false);
-    //       } else {
-    //         var bodyParams = {
-    //           "times": [...times],
-    //           "booked": selectedAvailability.booked
-    //         };
-    //         await api.updateTimeAvailability(
-    //             selectedAvailability.id, bodyParams);
-    //         _fetchData(_selectedDate);
-    //       }
-    //     } else {
-    //       if (selectedAvailability.booked != null &&
-    //           timeSelected == selectedAvailability.booked) {
-    //         // do nothing
-    //         setState(() => _isLoadingTime = false);
-    //       } else if (selectedAvailability.booked != null &&
-    //           timeSelected != selectedAvailability.booked) {
-    //         var bodyParams = {
-    //           "times": [...times],
-    //           "booked": selectedAvailability.booked
-    //         };
-    //         await api.updateTimeAvailability(
-    //             selectedAvailability.id, bodyParams);
-    //         _fetchData(_selectedDate);
-    //       } else {
-    //         await api.deleteTimeAvailability(selectedAvailability.id);
-    //         _fetchData(_selectedDate);
-    //       }
-    //     }
-    //   }
-    // }
   }
 
   void _onDaySelect(String daySelected) {

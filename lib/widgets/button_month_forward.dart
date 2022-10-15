@@ -9,11 +9,23 @@ class ButtonMonthForward extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    double screenWidth = screenSize.width;
     return ElevatedButton(
       onPressed: () => onForwardArrow(),
       style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(), padding: const EdgeInsets.all(15)),
-      child: const Icon(Icons.arrow_forward_outlined, color: Colors.white),
+        shape: const CircleBorder(),
+        padding: screenWidth < 350
+            ? const EdgeInsets.all(0)
+            : const EdgeInsets.all(15),
+      ),
+      child: screenWidth < 350
+          ? const Icon(
+        Icons.arrow_forward_outlined,
+        color: Colors.white,
+        size: 20,
+      )
+          : const Icon(Icons.arrow_forward_outlined, color: Colors.white),
     );
   }
 }

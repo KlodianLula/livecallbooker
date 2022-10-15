@@ -10,14 +10,25 @@ class ButtonMonthBack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    double screenWidth = screenSize.width;
+
     final bool isPastMonth = DateHelper.isPastMonth(selectedDate);
     return ElevatedButton(
       onPressed: isPastMonth ? () => onBackArrow() : null,
       style: ElevatedButton.styleFrom(
           shape: const CircleBorder(),
-          padding: const EdgeInsets.all(15),
+          padding: screenWidth < 350
+              ? const EdgeInsets.all(0)
+              : const EdgeInsets.all(15),
           primary: isPastMonth ? Colors.blue : Colors.grey),
-      child: const Icon(Icons.arrow_back_outlined, color: Colors.white),
+      child: screenWidth < 350
+          ? const Icon(
+              Icons.arrow_back_outlined,
+              color: Colors.white,
+              size: 20,
+            )
+          : const Icon(Icons.arrow_back_outlined, color: Colors.white),
     );
   }
 }
